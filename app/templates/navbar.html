@@ -1,0 +1,69 @@
+<div class="container-fluid">
+  <ul class="nav navbar-nav" style="margin-left: 10px">
+    <li style="background: #e6e6e6">
+      <a href="/" style="color: black; font-weight: bolder">Home</a>
+    </li>
+    <li>
+      <a
+        href="{{url_for('main.interview')}}"
+        style="color: black; font-weight: bolder"
+        >Inteview Pitches</a
+      >
+    </li>
+    <li>
+      <a
+        href="{{url_for('main.lines')}}"
+        style="color: black; font-weight: bolder"
+        >Pick Up Lines</a
+      >
+    </li>
+    <li>
+      <a
+        href="{{url_for('main.promotion')}}"
+        style="color: black; font-weight: bolder"
+        >Promotion Pitches</a
+      >
+    </li>
+    <li>
+      <a
+        href="{{url_for('main.product')}}"
+        style="color: black; font-weight: bolder"
+        >Product Pitches</a
+      >
+    </li>
+  </ul>
+
+  <ul class="nav navbar-nav navbar-right" style="margin-right: 10px">
+    {% if current_user.is_authenticated %}
+    <li>
+      <a
+        href="{{url_for('main.profile',uname=current_user.username)}}"
+        style="color: black; font-weight: bolder"
+        >Profile</a
+      >
+    </li>
+    <li>
+      <a
+        href="{{url_for('main.profile',uname=current_user.username)}}"
+        style="color: black; font-weight: bolder"
+        >{{current_user.username}}</a
+      >
+    </li>
+    <li>
+      <a
+        href="{{url_for('auth.logout')}}"
+        style="color: black; font-weight: bolder"
+        >Sign out</a
+      >
+    </li>
+    {% else %}
+    <li>
+      <a
+        href="{{url_for('auth.login')}}"
+        style="color: black; font-weight: bolder"
+        >Log in</a
+      >
+    </li>
+    {%endif%}
+  </ul>
+</div>
