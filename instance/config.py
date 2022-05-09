@@ -1,1 +1,1 @@
-SECRET_KEY = '<Flask WTF Secret Key>'
+SECRET_KEY = 'TheDifference'
