@@ -1,0 +1,16 @@
+{% extends 'base.html'%} {% import 'macros.html' as macro%} {% block content %}
+
+<div class="container">
+  <h3>Product Pitches</h3>
+  <a href="">
+    <br />
+    Add a new Pitch
+  </a>
+
+  <hr />
+
+  {{macro.displayCategory(productpitch)}}
+  <hr />
+</div>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html'%} {% import 'macros.html' as macro%} {% block content %}
+
+<div class="container">
+  <h3>Pick Up Lines</h3>
+  <a href=""> Add a new Pitch </a>
+
+  <hr />
+
+  {{macro.displayCategory(linespitch)}}
+  <hr />
+</div>
+
+{% endblock %}
