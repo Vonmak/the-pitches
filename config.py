@@ -3,7 +3,7 @@ import os
 
 
 class Config:
-    SECRET_KEY = os.environ.get('SECRET_KEY')
+    SECRET_KEY = 'TheDifference'
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://sniffer:sniff@localhost/thepitches'
 
 # class TestConfig(Config):
@@ -14,6 +14,7 @@ class ProdConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
 class DevConfig(Config):
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://sniffer:sniff@localhost/thepitches'
     DEBUG = True
     
 config_options ={
