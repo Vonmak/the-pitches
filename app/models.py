@@ -47,13 +47,17 @@ class Pitch(db.Model):
 
     id = db.Column(db.Integer, primary_key = True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable = False)
-    # description = db.Column(db.String(), index = True)
-    # title = db.Column(db.String())
+    description = db.Column(db.String(), index = True)
+    title = db.Column(db.String())
     category_id = db.Column(db.String(255), nullable=False)
     # comments = db.relationship('Comment',backref='pitch',lazy='dynamic')
     # upvotes = db.relationship('upVote', backref = 'pitch', lazy = 'dynamic')
     # downvotes = db.relationship('downvote', backref = 'pitch', lazy = 'dynamic')
-
+    
+    
+    def save_pitch(self):
+        db.session.add(self)
+        db.session.commit()
     
     @classmethod
     def get_pitches(cls, id):
@@ -91,26 +95,7 @@ class Pitch(db.Model):
 #         comments = Comment.query.filter_by(pitch_id=id).all()
 
 #         return comments
-    
-# class PitchCategory(db.Model):
-#     '''
-#     Function that defines different categories of pitches
-#     '''
-#     __tablename__ ='pitch_categories'
 
-
-#     id = db.Column(db.Integer, primary_key=True)
-#     name_of_category = db.Column(db.String(255))
-#     category_description = db.Column(db.String(255))
-
-#     @classmethod
-#     def get_categories(cls):
-#         '''
-#         This function fetches all the categories from the database
-#         '''
-#         categories = PitchCategory.query.all()
-#         return categories
-    
     
 # class upVote(db.Model):
 #     __tablename__ = 'upvotes'
