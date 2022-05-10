@@ -31,17 +31,40 @@ styles%} {{ super() }}
       style="border: 3px solid #f2f2f2; padding: 20px; margin-top: 10px"
     >
       <p style="font-family: 'Bellefair', serif; font-size: 20px">
-        Write your one minute pitch in any of the categories at the top and let
-        other users vote and comment on it. <br />
+        Write your one minute pitch in any of the categories listed below.
+        <br />
+        Let other users vote and comment on it. <br />
         Please also feel free to comment and vote on pitches posted by other
         people
       </p>
 
-      <div style="text-align: center">
-        <a href="">
-          <span>Add a New Pitch</span>
-        </a>
-      </div>
+      <a
+        href="{{url_for('main.interview')}}"
+        style="color: black; font-weight: bolder"
+      >
+        Inteview Pitches
+      </a>
+      &nbsp;&nbsp;|
+      <a
+        href="{{url_for('main.lines')}}"
+        style="color: black; font-weight: bolder"
+      >
+        Pick Up Lines
+      </a>
+      &nbsp;&nbsp;|
+      <a
+        href="{{url_for('main.promotion')}}"
+        style="color: black; font-weight: bolder"
+      >
+        Promotion Pitches
+      </a>
+      &nbsp;&nbsp;|
+      <a
+        href="{{url_for('main.product')}}"
+        style="color: black; font-weight: bolder"
+      >
+        Product Pitches
+      </a>
     </div>
   </div>
 </div>
