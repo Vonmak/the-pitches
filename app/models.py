@@ -68,33 +68,33 @@ class Pitch(db.Model):
         return f'Pitch {self.description}' 
 
 
-# class Comment(db.Model):
+class Comment(db.Model):
     
-#     __tablename__ = 'comments'
+    __tablename__ = 'comments'
 
-#     id = db.Column(db.Integer,primary_key = True)
-#     comment= db.Column(db.String)
-#     pitch_id = db.Column(db.Integer,db.ForeignKey('pitch.id'))
-#     username =  db.Column(db.String)
-#     votes= db.Column(db.Integer)
+    id = db.Column(db.Integer,primary_key = True)
+    comment= db.Column(db.String)
+    pitch_id = db.Column(db.Integer,db.ForeignKey('pitch.id'))
+    username =  db.Column(db.String)
+    votes= db.Column(db.Integer)
     
 
-#     def save_comment(self):
-#         '''
-#         Function that saves comments
-#         '''
-#         db.session.add(self)
-#         db.session.commit()
+    def save_comment(self):
+        '''
+        Function that saves comments
+        '''
+        db.session.add(self)
+        db.session.commit()
 
-#     @classmethod
-#     def clear_comments(cls):
-#         Comment.all_comments.clear()
+    @classmethod
+    def clear_comments(cls):
+        Comment.all_comments.clear()
 
-#     @classmethod
-#     def get_comments(cls,id):
-#         comments = Comment.query.filter_by(pitch_id=id).all()
+    @classmethod
+    def get_comments(cls,id):
+        comments = Comment.query.filter_by(pitch_id=id).all()
 
-#         return comments
+        return comments
 
     
 # class upVote(db.Model):
