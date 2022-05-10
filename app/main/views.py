@@ -24,10 +24,10 @@ def interview():
     '''
     View root page function that returns the index page and its data
     '''
-    # pitch = Pitch.query.filter_by().first()
+    pitches = Pitch.query.filter_by().first()
     interviewpitch = Pitch.query.filter_by(category_id = "interviewpitch")
     title = 'Interview Pitches'  
-    return render_template('interview.html', title = title,pitches= interviewpitch )
+    return render_template('interview.html', title = title,interviewpitch= interviewpitch, pitches = pitches )
 
 @main.route('/lines/pitches/')
 def lines():
@@ -36,22 +36,22 @@ def lines():
     '''
     title = 'Pick Up Lines'
 
-    # pitch = Pitch.query.filter_by().first()
-    lines = Pitch.query.filter_by(category_id="lines")
+    pitches = Pitch.query.filter_by().first()
+    pickuplines = Pitch.query.filter_by(category_id= "pickuplines")
 
-    return render_template('lines.html', title = title,pitches= lines )
+    return render_template('lines.html', title = title,pickuplines= pickuplines, pitches =pitches)
 
 @main.route('/promotion/pitches/')
-def promotion():
+def promotion(): 
     '''
     View root page function that returns the index page and its data
     '''
     title = 'Promotion Pitches'
 
-    # pitch = Pitch.query.filter_by().first()
+    pitches = Pitch.query.filter_by().first()
     promotionpitch = Pitch.query.filter_by(category_id = "promotionpitch")
 
-    return render_template('promotion.html', title = title,pitches= promotionpitch )
+    return render_template('promotion.html', title = title,promotionpitch= promotionpitch ,pitches = pitches)
 
 
 @main.route('/product/pitches/')
@@ -60,9 +60,9 @@ def product():
     View root page function that returns the index page and its data
     '''
     title = 'Product Pitches'
-    # pitch = Pitch.query.filter_by().first()
+    pitches = Pitch.query.filter_by().first()
     productpitch = Pitch.query.filter_by(category_id = "productpitch")
-    return render_template('product.html', title = title,pitches= productpitch )
+    return render_template('product.html', title = title,productpitch= productpitch,pitches = pitches )
  
 #  end of category_id root functions
 
