@@ -1,8 +1,5 @@
 {% macro displayCategory(pitches)%} {%if pitches%} {%for pitch in pitches %}
-<div
-  class="panel style="
-  style="box-shadow: 5px 5px 5px 5px #f2f2f2; padding: 10px"
->
+<div class="container">
   <h4>{{pitch.title}}</h4>
   <p>{{pitch.description}}</p>
   <a
@@ -24,16 +21,16 @@
   >
 </div>
 {% endfor %} {% endif%} {% endmacro%} {% macro displayComment(comments) %}
-<ul>
+<div class="container">
   {% if comments %} {% for comment in comments %}
-  <div class="row text-center">
-    <p style="color: brown">{{ comment.comment }}</p>
+  <div class="row">
+    <p>{{ comment.comment }}</p>
     <small> posted by {{comment.username}}</small>
   </div>
   {% endfor %} {% else %}
 
   <h3>This post does not does not have any comments yet !</h3>
   {%endif%}
-</ul>
+</div>
 
 {% endmacro %}

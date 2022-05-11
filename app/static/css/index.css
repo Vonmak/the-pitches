@@ -2,6 +2,8 @@
 body{
     background: linear-gradient(#001d3d, #000814,#001d3d);
     height: 100vh;
+    /* text-align: center; */
+
 }
 
 .main{
@@ -35,7 +37,8 @@ h1{
 }
 p{
     font-family: 'Bellefair', serif; 
-    font-size: 20px
+    font-size: 20px;
+    color: #fff 
 }
 a{
     /* text-decoration: line-through; */
@@ -49,11 +52,39 @@ a{
 .image{
     height: 50vh;
     width: 500px;
+    margin: 20px;
     /* border: 3px solid #f2f2f2;  */
 }
 img{
     height: 50vh;
     width: 500px;
     border: 3px solid transparent; 
+    border-radius: 40px;
     /* border-image: transparent; */
+}
+.form{
+    color: #fff
+}
+.img{
+    /* background: #001d3d, #000814,#001d3d) */
+    height: 100px;
+    width: 100px;
+}
+h3{
+    font-family: 'Diplomata SC', cursive;
+    background: linear-gradient(#006daa,#a100f2,#f20089);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    
+}
+h4{
+    /* text-align: center; */
+    /* font-size: 30px; */
+    /* color: ; */
+    font-size:30px; 
+    font-family: 'Rubik Moonrocks', cursive;
+    background: linear-gradient(#006daa,#fff);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    /* border-radius: 4px; */
 }

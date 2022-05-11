@@ -1,9 +1,35 @@
-{% extends 'base.html'%} {% import 'macros.html' as macro%} {% block content %}
+{% import 'macros.html' as macro%}
 
-<div class="container">
-  <h3>Inteview Pitches</h3>
-  <hr />
-  {{macro.displayCategory(interviewpitch)}}
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    {% extends 'base.html' %} {% block content %}{% block styles%} {{ super() }}
 
-{% endblock %}
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='css/index.css')}}"
+    />
+    {% endblock %}
+    <div class="container">
+      <h3>interview Pitches</h3>
+      <div class="row main">
+        <div class="col-md-7">{{macro.displayCategory(interviewpitch)}}</div>
+        <div class="col-md-3 image">
+          <a href="{{url_for('main.lines')}}"> Pick Up Lines </a>
+          &nbsp;&nbsp;|
+          <a href="{{url_for('main.promotion')}}"> Promotion Pitches </a>
+          &nbsp;&nbsp;|
+          <a href="{{url_for('main.product')}}"> Product Pitches </a>
+          <hr />
+          <img src="{{url_for('static', filename='interview.jpeg')}}" />
+        </div>
+      </div>
+    </div>
+
+    {% endblock %}
+  </body>
+</html>

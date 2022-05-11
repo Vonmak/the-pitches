@@ -1,9 +1,27 @@
-{% import 'bootstrap/wtf.html' as wtf %} {% extends 'bootstrap/base.html' %}
-{%include 'navbar.html'%} {% block content %}
-<div class="container">
-  <div class="row">
-    <div class="jumbotron">{{wtf.quick_form(form)}}</div>
-  </div>
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    {% import 'bootstrap/wtf.html' as wtf %} {% extends 'bootstrap/base.html' %}
+    {%include 'navbar.html'%} {% block content %}{% block styles%} {{ super() }}
 
-{% endblock %}
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='css/index.css')}}"
+    />
+    {% endblock %}
+    <div class="container">
+      <div class="row main">
+        <div class="col-md-9 form">{{wtf.quick_form(form)}}</div>
+        <div class="col-md-3 image">
+          <img src="{{url_for('static', filename='new.jpeg')}}" />
+        </div>
+      </div>
+    </div>
+
+    {% endblock %}
+  </body>
+</html>
