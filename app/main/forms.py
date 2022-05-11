@@ -13,3 +13,7 @@ class PitchForm(FlaskForm):
 	description = TextAreaField("What would you like to pitch ?",validators=[Required()])
 	category_id = SelectField('Label', choices=[ ('promotionpitch','promotionpitch'), ('interviewpitch','interviewpitch'),('pickuplines','pickuplines'),('productpitch','productpitch')],validators=[Required()])
 	submit = SubmitField('Submit')
+
+class CommentForm(FlaskForm):
+    comment = TextAreaField('Add comment',validators=[Required()])
+    submit = SubmitField()
