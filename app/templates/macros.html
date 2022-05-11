@@ -5,5 +5,35 @@
 >
   <h4>{{pitch.title}}</h4>
   <p>{{pitch.description}}</p>
+  <a
+    href="{{url_for('main.new_comment',pitch_id = pitch.id)}}"
+    class="btn btn-info"
+  >
+    Add a comment</a
+  >
+  <a
+    href="{{url_for('main.up_vote',pitch_id = pitch.id)}}"
+    class="btn btn-primary btn-sm"
+    ><i></i>Upvote <span>{{pitch.upvotes.count()}}</span></a
+  >
+  <a
+    href="{{url_for('main.down_vote',pitch_id = pitch.id)}}"
+    class="btn btn-danger btn-sm"
+    ><i class="far fa-thumbs-up"></i>Downvote
+    <span>{{pitch.downvotes.count()}}</span></a
+  >
 </div>
-{% endfor %} {% endif%} {% endmacro%}
+{% endfor %} {% endif%} {% endmacro%} {% macro displayComment(comments) %}
+<ul>
+  {% if comments %} {% for comment in comments %}
+  <div class="row text-center">
+    <p style="color: brown">{{ comment.comment }}</p>
+    <small> posted by {{comment.username}}</small>
+  </div>
+  {% endfor %} {% else %}
+
+  <h3>This post does not does not have any comments yet !</h3>
+  {%endif%}
+</ul>
+
+{% endmacro %}
