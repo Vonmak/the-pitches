@@ -5,8 +5,10 @@
 ### Flask ###
 instance/*
 !instance/.gitignore
+instance/
 .webassets-cache
 .env
+start.sh
 
 ### Flask.Python Stack ###
 # Byte-compiled / optimized / DLL files

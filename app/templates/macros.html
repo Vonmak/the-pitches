@@ -2,6 +2,7 @@
 <div class="container">
   <h4>{{pitch.title}}</h4>
   <p>{{pitch.description}}</p>
+  <footer class="blockquote-footer"> Posted by {{pitch.user.username}}</footer>
   <a
     href="{{url_for('main.new_comment',pitch_id = pitch.id)}}"
     class="btn btn-info"
@@ -16,7 +17,7 @@
   <a
     href="{{url_for('main.down_vote',pitch_id = pitch.id)}}"
     class="btn btn-danger btn-sm"
-    ><i class="far fa-thumbs-up"></i>Downvote
+    ></i>Downvote
     <span>{{pitch.downvotes.count()}}</span></a
   >
 </div>
@@ -25,7 +26,7 @@
   {% if comments %} {% for comment in comments %}
   <div class="row">
     <p>{{ comment.comment }}</p>
-    <small> posted by {{comment.username}}</small>
+    <p>posted by {{comment.user.username}}</p>
   </div>
   {% endfor %} {% else %}
 
