@@ -88,3 +88,7 @@ h4{
     -webkit-background-clip: text;
     /* border-radius: 4px; */
 }
+.comments{
+    border: 3px solid #f2f2f2; 
+    overflow-y: scroll;
+}
