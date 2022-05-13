@@ -76,7 +76,7 @@ class Comment(db.Model):
     id = db.Column(db.Integer,primary_key = True)
     comment= db.Column(db.String)
     pitch_id = db.Column(db.Integer,db.ForeignKey('pitch.id'))
-    user_name = db.Column(db.Integer, db.ForeignKey('users.id'))
+    user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
     date_posted = db.Column(db.DateTime(250), default=datetime.utcnow)
     # votes= db.Column(db.Integer)
     
