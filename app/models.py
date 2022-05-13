@@ -75,8 +75,8 @@ class Comment(db.Model):
     __tablename__='comments'
     
     id = db.Column(db.Integer,primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable = False)
-    pitch_id = db.Column(db.Integer, db.ForeignKey('pitch.id'), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    pitch_id = db.Column(db.Integer, db.ForeignKey('pitch.id'))
     comment= db.Column(db.String)
     date_posted = db.Column(db.DateTime(250), default=datetime.utcnow)
 
