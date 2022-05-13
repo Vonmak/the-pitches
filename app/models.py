@@ -69,19 +69,46 @@ class Pitch(db.Model):
     
     
     
+# class Comment(db.Model):
+#     __tablename__='comments'
+    
+#     id = db.Column(db.Integer,primary_key=True)
+#     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+#     pitch_id = db.Column(db.Integer, db.ForeignKey('pitch.id'))
+#     comment= db.Column(db.String)
+#     date_posted = db.Column(db.DateTime(250), default=datetime.utcnow)
+
+    
+#     def __repr__(self):
+#         return f"Comment : id: {self.id} comment: {self.comment}"
+
 class Comment(db.Model):
-    __tablename__='comments'
     
+    __tablename__ = 'comments'
+
     id = db.Column(db.Integer,primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
-    pitch_id = db.Column(db.Integer, db.ForeignKey('pitch.id'))
     comment= db.Column(db.String)
+    pitch_id = db.Column(db.Integer,db.ForeignKey('pitch.id'))
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     date_posted = db.Column(db.DateTime(250), default=datetime.utcnow)
-
     
-    def __repr__(self):
-        return f"Comment : id: {self.id} comment: {self.comment}"
 
+    def save_comment(self):
+        '''
+        Function that saves comments
+        '''
+        db.session.add(self)
+        db.session.commit()
+
+    @classmethod
+    def clear_comments(cls):
+        Comment.all_comments.clear()
+
+    @classmethod
+    def get_comments(cls,id):
+        comments = Comment.query.filter_by(pitch_id=id).all()
+
+        return comments
  
 class upVote(db.Model):
     __tablename__ = 'upvotes'
