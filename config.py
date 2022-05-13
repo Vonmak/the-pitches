@@ -28,8 +28,8 @@ class Config:
 class ProdConfig(Config):
     # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://sniffer:sniff@localhost/thepitches'
     SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI')
-    if SQLALCHEMY_DATABASE_URI.startswith("postgres://"):
-        SQLALCHEMY_DATABASE_URI = SQLALCHEMY_DATABASE_URI.replace("postgres://", "postgresql://",1)
+    # if SQLALCHEMY_DATABASE_URI.startswith("postgres://"):
+        # SQLALCHEMY_DATABASE_URI = SQLALCHEMY_DATABASE_URI.replace("postgres://", "postgresql://",1)
 
 
 
