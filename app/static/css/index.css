@@ -2,37 +2,26 @@
 body{
     background: linear-gradient(#001d3d, #000814,#001d3d);
     height: 100vh;
-    /* text-align: center; */
 
 }
 
 .main{
-    /* background: linear-gradient(#001d3d, #000814); */
-    /* padding: 100px; */
-    /* margin-top: 50px; */
     margin-bottom: 100px;
     height: 60vh;
-    /* border-radius: 4px; */
     display:flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-items:center;
 }
 h1{
     text-align: center;
-    /* font-size: 30px; */
-    /* color: ; */
     font-size:70px; 
     font-family: 'Creepster', cursive;
     background: linear-gradient(#006daa,#001d3d);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    /* border-radius: 4px; */
 }
 .display{
-    /* border: 3px solid #f2f2f2;  */
     padding: 20px; 
-    /* margin-top: 10px; */
     color: #fff
 }
 p{
@@ -41,7 +30,6 @@ p{
     color: #fff 
 }
 a{
-    /* text-decoration: line-through; */
     color: #006daa; 
     font-weight: bolder;
     
@@ -53,20 +41,17 @@ a{
     height: 50vh;
     width: 500px;
     margin: 20px;
-    /* border: 3px solid #f2f2f2;  */
 }
 img{
     height: 50vh;
     width: 500px;
     border: 3px solid transparent; 
     border-radius: 40px;
-    /* border-image: transparent; */
 }
 .form{
     color: #fff
 }
 .img{
-    /* background: #001d3d, #000814,#001d3d) */
     height: 100px;
     width: 100px;
 }
@@ -78,17 +63,12 @@ h3{
     
 }
 h4{
-    /* text-align: center; */
-    /* font-size: 30px; */
-    /* color: ; */
     font-size:30px; 
     font-family: 'Rubik Moonrocks', cursive;
     background: linear-gradient(#006daa,#fff);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    /* border-radius: 4px; */
 }
-.comments{
-    border: 3px solid #f2f2f2; 
-    overflow-y: scroll;
+footer{
+    color: #a100f2;
 }

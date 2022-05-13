@@ -84,14 +84,18 @@ def new_pitch():
         return redirect(url_for('main.index'))
     return render_template('pitch.html',form=form)
 
+
 @main.route('/comment/new/<int:pitch_id>', methods = ['GET','POST'])
 def new_comment(pitch_id):
     form = CommentForm()
     pitch=Pitch.query.get(pitch_id)
     if form.validate_on_submit():
         comment = form.comment.data
-        new_comment = Comment(comment = comment, pitch_id = pitch_id)
-        new_comment.save_comment()
+
+        new_comment = Comment(comment = comment, user_id = current_user._get_current_object().id, pitch_id = pitch_id)
+        db.session.add(new_comment)
+        db.session.commit()
+
 
         return redirect(url_for('.new_comment', pitch_id= pitch_id))
 
