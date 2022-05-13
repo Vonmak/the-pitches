@@ -41,8 +41,6 @@ class User(UserMixin, db.Model):
     
     
 class Pitch(db.Model):
-    '''
-    '''
     __tablename__ = 'pitch'
 
     id = db.Column(db.Integer, primary_key = True)

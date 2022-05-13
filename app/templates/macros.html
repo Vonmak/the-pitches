@@ -26,6 +26,9 @@
   {% if comments %} {% for comment in comments %}
   <div class="row">
     <p>{{ comment.comment }}</p>
+    <p>{{ comment.pitch_id }}</p>
+    <p>{{ comment.user_id }}</p>
+    <p>{{ comment.date_posted }}</p>
     <footer>posted by {{comment.user.username}}</footer>
   </div>
   {% endfor %} {% else %}
