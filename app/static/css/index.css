@@ -1,74 +1,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Akronim&family=Creepster&family=Diplomata+SC&family=Roboto:wght@300;400;500;700;900&family=Rubik+Moonrocks&display=swap');
-body{
-    background: linear-gradient(#001d3d, #000814,#001d3d);
+body {
+    background: linear-gradient(#001d3d, #000814, #001d3d);
     height: 100vh;
-
 }
 
-.main{
+.main {
     margin-bottom: 100px;
     height: 60vh;
-    display:flex;
+    display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
 }
-h1{
+
+h1,
+h6 {
     text-align: center;
-    font-size:70px; 
+    font-size: 70px;
     font-family: 'Creepster', cursive;
-    background: linear-gradient(#006daa,#001d3d);
+    background: linear-gradient(#006daa, #001d3d);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
-.display{
-    padding: 20px; 
+
+.display {
+    padding: 20px;
     color: #fff
 }
-p{
-    font-family: 'Bellefair', serif; 
+
+p {
+    font-family: 'Bellefair', serif;
     font-size: 20px;
-    color: #fff 
+    color: #fff
 }
-a{
-    color: #006daa; 
+
+a {
+    color: #006daa;
     font-weight: bolder;
-    
 }
-.new{
+
+.new {
     font-size: xx-large;
 }
-.image{
+
+.image {
     height: 50vh;
     width: 500px;
     margin: 20px;
 }
-img{
+
+img {
     height: 50vh;
     width: 500px;
-    border: 3px solid transparent; 
+    border: 3px solid transparent;
     border-radius: 40px;
 }
-.form{
+
+.form {
     color: #fff
 }
-.img{
+
+.img {
     height: 100px;
     width: 100px;
 }
-h3{
+
+h3 {
     font-family: 'Diplomata SC', cursive;
-    background: linear-gradient(#006daa,#a100f2,#f20089);
+    background: linear-gradient(#006daa, #a100f2, #f20089);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    
 }
-h4{
-    font-size:30px; 
+
+h4 {
+    font-size: 30px;
     font-family: 'Rubik Moonrocks', cursive;
-    background: linear-gradient(#006daa,#fff);
+    background: linear-gradient(#006daa, #fff);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
-footer{
+
+footer {
     color: #a100f2;
 }

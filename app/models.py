@@ -62,7 +62,7 @@ class Pitch(db.Model):
     def get_pitches(cls):
         pitches = Pitch.query.filter_by(pitch_id=id).all()
         return pitches
-
+    
     def __repr__(self):
         return f"Pitch ('{self.description}','{self.date}')"
     
